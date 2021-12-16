@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "# Table of Contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomps0189/team-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomps0189/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/thomps0189/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
