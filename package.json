@@ -18,5 +18,8 @@
   "homepage": "https://github.com/thomps0189/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^27.4.5"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
   }
 }
