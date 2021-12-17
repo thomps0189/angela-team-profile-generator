@@ -36,6 +36,8 @@ const questions = [
     }
 ]
 
+questions();
+
 // TODO: Create a function to write the HTML file
 
 // TODO: Create function to create the file. 
