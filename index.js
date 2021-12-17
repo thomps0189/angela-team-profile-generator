@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// generate html
+const generateHTML = require("./generateHTML");
 // TODO: Create an array of questions for employee info
 const questions = [
     {
@@ -36,10 +38,19 @@ const questions = [
     }
 ]
 
-questions();
+
 
 // TODO: Create a function to write the HTML file
 
 // TODO: Create function to create the file. 
 
+
 // Function call to create page
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data) {
+        writeToFile("index.html", generateHTML(data));
+    })
+}
+
+init();
