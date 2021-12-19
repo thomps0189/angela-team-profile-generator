@@ -1,4 +1,10 @@
+// create cards for all roles
 
+// card for engineer
+
+// card for Manager
+
+// card for intern
 function generateHTML(data) {
     return `
     
@@ -21,6 +27,7 @@ function generateHTML(data) {
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Id: ${data.id}</li>
           <li class="list-group-item">Email: ${data.email}</li>
+          <li class="list-group-item">Number: ${data.officeNumber}</li>
           <li class="list-group-item">GitHub (if applicable): ${data.github}</li>
           <li class="list-group-item">School (if applicable): ${data.school}</li>
         </ul>

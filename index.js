@@ -33,9 +33,20 @@ const questions = [
     },
     {
         type: "input",
-        name: "notes",
-        message: "Please include any additional notes (ex. number, GitHub, school, etc.)."
+        name: "github",
+        message: "What is Engineer's GitHub username?"
+    },
+    {
+        type: "input",
+        name: "school",
+        message: "What is Intern's school name?"
+    },
+    {
+        type: "input",
+        name: "officeNumber",
+        message: "What is Manager's office number?"
     }
+
 ]
 
 
@@ -57,7 +68,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        writeToFile("index.html", generateHTML(data));
+        writeToFile("./dist/index.html", generateHTML(data));
     })
 }
 
