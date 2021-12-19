@@ -41,7 +41,15 @@ const questions = [
 
 
 // TODO: Create a function to write the HTML file
-
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("Your Team Profile has been created!")
+        }
+    })
+};
 // TODO: Create function to create the file. 
 
 
