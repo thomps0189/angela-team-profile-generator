@@ -1,6 +1,10 @@
 // create cards for all roles
 // Icons for roles - manager: clipboard, engineer: document, intern: headphones, 
 // card for engineer
+
+const employeeInfo = (data) => {
+  let html = data.map (employeeInfo)
+}
 const generateEngineer = function (engineer) {
   return `
   <div class="card-header bg-primary text-white fs-4">
