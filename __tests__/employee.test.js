@@ -1,6 +1,9 @@
-const { TestWatcher } = require("@jest/core");
-const employee = require("../lib/employee");
+const Employee = require("../lib/employee");
 
-test("if employee is a string", () => {
-    expect(employee).toBe("")
+test("creates employee object", () => {
+   const employee = new Employee("Jim", "123", "test@test.com");
+
+   expect(employee.name).toBe("Jim");
+   expect(employee.id).toBe("123");
+   expect(employee.email).toBe("test@test.com");
 });
