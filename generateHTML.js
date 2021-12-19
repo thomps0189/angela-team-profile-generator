@@ -1,6 +1,7 @@
 
 function generateHTML(data) {
     return `
+    
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +15,14 @@ function generateHTML(data) {
     <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
     <div class="card mx-auto" style="width: 18rem;">
         <div class="card-header bg-primary text-white fs-4">
-          Featured
+          ${data.employeeName}
         </div>
-        <div class="bg-primary text-white fs-5 text-center">Role</div>
+        <div class="bg-primary text-white fs-5 text-center">${data.role}</div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">Id: ${data.id}</li>
+          <li class="list-group-item">Email: ${data.email}</li>
+          <li class="list-group-item">GitHub (if applicable): ${data.github}</li>
+          <li class="list-group-item">School (if applicable): ${data.school}</li>
         </ul>
       </div>
 </body>

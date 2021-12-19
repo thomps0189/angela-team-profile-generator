@@ -8,7 +8,7 @@ const generateHTML = require("./generateHTML");
 const questions = [
     {
         type: "input",
-        name: "name",
+        name: "employeeName",
         message: "What is the employee's name?"
     },
     {
