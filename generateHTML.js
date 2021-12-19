@@ -9,7 +9,7 @@ const generateEngineer = function (engineer) {
 <div class="bg-primary text-white fs-5 "><span class="oi oi-document m-2"></span>Engineer</div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">Id: ${data.id}</li>
-  <li class="list-group-item">Email: ${data.email}</li>
+  <li class="list-group-item">Email: <a href = "mailto:${data.email}">${data.email}</a></li>
   <li class="list-group-item">GitHub (if applicable): ${data.github}</li>
 </ul>
 </div>
@@ -27,7 +27,7 @@ const generateManager = function (manager) {
   </div>
   <ul class="list-group list-group-flush">
   <li class="list-group-item">Id: ${data.id}</li>
-  <li class="list-group-item">Email: ${data.email}</li>
+  <li class="list-group-item">Email: <a href = "mailto:${data.email}">${data.email}</a></li>
   <li class="list-group-item">Number: ${data.officeNumber}</li>
   </ul>
   </div>
@@ -45,7 +45,7 @@ const generateIntern = function (intern) {
   </div>
   <ul class="list-group list-group-flush">
   <li class="list-group-item">Id: ${data.id}</li>
-  <li class="list-group-item">Email: ${data.email}</li>
+  <li class="list-group-item">Email: <a href = "mailto:${data.email}">${data.email}</a></li>
   <li class="list-group-item">School: ${data.school}</li>
   </ul>
   </div>
@@ -68,17 +68,7 @@ function generateHTML(data) {
 <body>
     <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
     <div class="card mx-auto" style="width: 18rem;">
-        <div class="card-header bg-primary text-white fs-4">
-          ${data.employeeName}
-        </div>
-        <div class="bg-primary text-white fs-5">${data.role}</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Id: ${data.id}</li>
-          <li class="list-group-item">Email: ${data.email}</li>
-          <li class="list-group-item">Number: ${data.officeNumber}</li>
-          <li class="list-group-item">GitHub (if applicable): ${data.github}</li>
-          <li class="list-group-item">School (if applicable): ${data.school}</li>
-        </ul>
+                
       </div>
 </body>
 </html>
