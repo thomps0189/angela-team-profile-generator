@@ -38,8 +38,7 @@ const generateHTML = require("./generateHTML");
 const Engineer = require('./lib/engineer');
 const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
-// const { getEnabledCategories } = require("trace_events");
-// const { inherits } = require("util");
+
 let myTeamArray = [];
 // TODO: Create an array of questions for employee info
 const addNewEmployees = () => {
@@ -176,56 +175,10 @@ const writeFile = () => {
         }
     })
 }
-// managerQuestions();
+
 
 
 const init = () => {
     addNewEmployees()
 };
 init ()
-// writeFile();
-
-// function init() {
-//     inquirer.prompt(addNewEmployees())
-//     .then(function(answers) {
-//         writeToFile("index.html", generateHTML(answers));
-//     })
-// }
-
-// init();
-
-// TODO: Create a function to write the HTML file
-// const createPage = () => {
-//     fs.writeFileSync("./dist/index.html", generateHTML(data), err => {
-//         if (err) console.log(err)
-//     })
-// }
-
-// createPage();
-// TODO: Create function to create the file. 
-// managerQuestions()
-// .then(employeeQuestions)
-// .then(myTeamArray => {
-//     return generateHTML(myTeamArray)
-// })
-// .then(pageHTML => {
-//     return fs.writeFile(pageHTML)
-// })
-
-// function createTeam() {
-//     console.log("Team created!")
-
-// }
-
-// Function call to create page
-// function init() {
-//     inquirer.prompt(managerQuestions)
-//     .then(addNewEmployees)
-//     .then(function(data) {
-//         writeToFile("./dist/index.html", generateHTML(data));
-//     })
-// }
-
-// init();
-
-
