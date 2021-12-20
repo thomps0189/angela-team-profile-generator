@@ -2,6 +2,10 @@
 // Icons for roles - manager: clipboard, engineer: document, intern: headphones, 
 // card for engineer
 
+function generateHTML() {
+  console.log("hello")
+}
+
 const employeeInfo = (data) => {
   let html = data.map (employeeInfo)
 }
@@ -56,28 +60,28 @@ const generateIntern = function (intern) {
   `
 }
 // entire page with roles that will be added
-function generateHTML(data) {
-    return `
+// function generateHTML(data) {
+//     return `
     
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <title>My Team</title>
-</head>
-<body>
-    <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
-    <div class="card mx-auto" style="width: 18rem;">
+//     <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+//     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+//     <title>My Team</title>
+// </head>
+// <body>
+//     <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
+//     <div class="card mx-auto" style="width: 18rem;">
                 
-      </div>
-</body>
-</html>
-    `
+//       </div>
+// </body>
+// </html>
+//     `
     
-}
+// }
 
-module.exports = generateHTML;
+module.exports = generateHTML();

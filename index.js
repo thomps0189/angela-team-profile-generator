@@ -9,9 +9,39 @@ const generateHTML = require("./generateHTML");
 const Engineer = require('./lib/engineer');
 const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
+// const { getEnabledCategories } = require("trace_events");
 // const { inherits } = require("util");
 const myTeamArray = [];
 // TODO: Create an array of questions for employee info
+const addNewEmployees = () => {
+    return inquirer.prompt ([
+        {
+            type: "list",
+            name: "addEmployees",
+            message: "Who would you like to add to your team?",
+            choices: ["Manager", "Engineer", "Intern", "No more members"]
+        }
+    ]) .then(({addEmployees}) => {
+        switch(addEmployees) {
+            case "Manager":
+            managerQuestions();
+            return; 
+
+            case "Engineer":
+            engineerQuestions();
+            return;
+            
+
+            case "Intern":
+            internQuestions();
+            return;
+
+            case "No more members":
+            generateHTML();
+            return;
+        }
+    })
+}
 
 const managerQuestions = () => {
     return inquirer.prompt ([
@@ -45,30 +75,7 @@ const managerQuestions = () => {
     })
 }
 
-const addNewEmployees = () => {
-    return inquirer.prompt ([
-        {
-            type: "list",
-            name: "addEmployees",
-            message: "Who would you like to add to your team?",
-            choices: ["Engineer", "Intern", "No more members"]
-        }
-    ]) .then(function(data) {
-        switch(data.addNewEmployees) {
-            case "Engineer":
-            engineerQuestions();
-            break;
 
-            case "Intern":
-            internQuestions();
-            break;
-
-            case "No more members":
-            initiateTeam();
-            break;
-        }
-    })
-}
 
 const engineerQuestions = () => {
     inquirer.prompt ([
@@ -142,7 +149,12 @@ const writeFile = data => {
         }
     })
 }
-managerQuestions();
+// managerQuestions();
+
+const init = () => {
+    addNewEmployees()
+};
+init ()
 // writeFile();
 
 // function init() {
@@ -187,4 +199,5 @@ managerQuestions();
 // }
 
 // init();
+
 
