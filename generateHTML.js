@@ -21,6 +21,36 @@ const employeeInfo = (data) => {
         </ul>
         </div>
       `
+    } else if (employee.getRole() === "Engineer") {
+      return `
+          <div class="card-header bg-primary text-white fs-4">
+          ${employee.employeeName}
+        </div>
+        <div class="bg-primary text-white fs-5 "><span class="oi oi-document m-2"></span>Engineer</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Id: ${employee.id}</li>
+          <li class="list-group-item">Email: <a href = "mailto:${employee.email}">${employee.email}</a></li>
+          <li class="list-group-item">GitHub (if applicable): <a href = "www.github.com/${employee.github}>${employee.github}</a></li>
+        </ul>
+        </div>
+      `
+    } else if (employee.getRole() === "Intern") {
+      return `
+      <div class="card-header bg-primary text-white fs-4">
+      ${employee.employeeName}
+      </div>
+      <div class="bg-primary text-white fs-5 ">
+      <span class="oi oi-headphones m-2"></span>
+      Intern
+      </div>
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: ${employee.id}</li>
+      <li class="list-group-item">Email: <a href = "mailto:${employee.email}">${employee.email}</a></li>
+      <li class="list-group-item">School: ${employee.school}</li>
+      </ul>
+      </div>
+      `
+
     }
   })
   console.log(data);
