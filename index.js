@@ -1,31 +1,38 @@
 // Packages needed for this app
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
 
 // generate html
-// const generateHTML = require("./generateHTML");
-function generateHTML() {
-    return `
-    
+const generateHTML = require("./generateHTML");
+// const generateHTML = (data) => {
+//     if("choice".value === "Manager") {
+//         return `
+//             <div>Manager info here. </div>
+            
+//             `
+//     }
+
+//     return `
 //     <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-//     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-//     <title>My Team</title>
-// </head>
-// <body>
-//     <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
-//     <div class="card mx-auto" style="width: 18rem;">
-                
-//       </div>
-// </body>
-// </html>
+//             <html lang="en">
+//             <head>
+//                 <meta charset="UTF-8">
+//                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+//                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+//                 <title>My Team</title>
+//             </head>
+//             <body>
+//                 <header class="bg-danger text-center fs-1 text-white mb-5">My Team</header>
+//                 <div class="card mx-auto" style="width: 18rem;">
+//                             <div>test</div>
+//                 </div>
+//             </body>
+//             </html>
 //     `
-}
+// }
 
 // roles
 const Engineer = require('./lib/engineer');
@@ -33,7 +40,7 @@ const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
 // const { getEnabledCategories } = require("trace_events");
 // const { inherits } = require("util");
-const myTeamArray = [];
+let myTeamArray = [];
 // TODO: Create an array of questions for employee info
 const addNewEmployees = () => {
     return inquirer.prompt ([
@@ -97,8 +104,6 @@ const managerQuestions = () => {
     })
 }
 
-
-
 const engineerQuestions = () => {
     inquirer.prompt ([
         {
@@ -161,13 +166,13 @@ const internQuestions = () => {
     })
 }
 
-const writeFile = data => {
-    fs.writeFile("./dist/index.html", generateHTML(data), err => {
+const writeFile = () => {
+    fs.writeFile(`${path.join(process.cwd())}/dist/index.html`, generateHTML(myTeamArray), err => {
         if (err) {
             console.log(err);
             return;
         } else {
-            console.log("Profile created!")
+            console.log("profile created!")
         }
     })
 }
