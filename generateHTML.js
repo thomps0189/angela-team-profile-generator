@@ -4,8 +4,8 @@
 const Manager = require("./lib/manager")
 
 const employeeInfo = (data) => {
-  let html = data.map (employee => {
-    if(employee.getRole() === "Manager") {
+  let html = data.map(employee => {
+    if (employee.getRole() === "Manager") {
       return `
         <div class="card-header bg-primary text-white fs-4">
         ${employee.employeeName}
@@ -30,7 +30,7 @@ const employeeInfo = (data) => {
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Id: ${employee.id}</li>
           <li class="list-group-item">Email: <a href = "mailto:${employee.email}">${employee.email}</a></li>
-          <li class="list-group-item">GitHub (if applicable): <a href = "www.github.com/${employee.github}>${employee.github}</a></li>
+          <li class="list-group-item">GitHub (if applicable): <a href = "www.github.com/${employee.github}">${employee.github}</a></li>
         </ul>
         </div>
       `
